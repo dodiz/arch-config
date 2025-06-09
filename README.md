@@ -1,4 +1,15 @@
-# Linux guide
+# Arch setup
+
+Table of contents
+
+- [Network commands](#network-commands)
+- [Grub, add windows option](#grub-add-windows-option)
+- [Hyprland](#hyprland)
+  - [Nvidia and start](#nvidia-and-start)
+  - [Layout it](#layout-it)
+  - [DM Ly (login)](#dm-ly-login)
+  - [Wofi (program launcher)](#wofi-program-launcher)
+  - [Waybar (Status bar)](#waybar-status-bar)
 
 ## Network commands
 
@@ -33,7 +44,7 @@ In case you installed another EFI partition to boot arch, windows boot partition
 
 - run `lsblk -f` and find Windows EFI partition
 - make directory `mkdir -p /mnt/efi-win`
-- mount it `sudo mount /dev/nvme0n1p1 /mnt/efi-win`
+- mount it `sudo mount /dev/nvme0n1p1 /mnt/efi-win` (change `nvme0n1p1 with windows EFI partition name)
 - verify that `/mnt/efi-win/EFI/Microsoft/Boot/bootmgr.efi` exists
 - edit `sudo nano /etc/grub.d/40_custom` with
 
@@ -88,7 +99,22 @@ In case you installed another EFI partition to boot arch, windows boot partition
   }
   ```
 
-### DM Ly
+### DM Ly (login)
 
 - `sudo pacman -S ly`
 - `sudo systemctl enable ly.service`
+
+- Make so Ly starts Hyprland using nvidia, `nano ~/.xsession`
+- add this line `exec dbus-run-session Hyprland`
+- make it executable `chmod +x ~/.xsession`
+- check on kitty if `echo $DBUS_SESSION_BUS_ADDRESS` returns `unix:path=/run/user/1000/bus`
+
+### Wofi (program launcher)
+
+- `sudo pacman -S wofi`
+- add `.config/wofi/style.css` from `https://github.com/dracula/wofi` or other
+
+### Waybar (Status bar)
+
+- `sudo pacman -S waybar`
+- `sudo pacman -S ttf-font-awesome` for icons on waybar
