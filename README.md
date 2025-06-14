@@ -10,6 +10,8 @@ Table of contents
   - [DM Ly (login)](#dm-ly-login)
   - [Wofi (program launcher)](#wofi-program-launcher)
   - [Waybar (Status bar)](#waybar-status-bar)
+- [Apps with Wayland](#apps-with-wayland)
+  - [Vscode](#vscode)
 
 ## Network commands
 
@@ -118,3 +120,10 @@ In case you installed another EFI partition to boot arch, windows boot partition
 
 - `sudo pacman -S waybar`
 - `sudo pacman -S ttf-font-awesome` for icons on waybar
+- Icons: `sudo pacman -S ttf-nerd-fonts-symbols`
+
+## Apps with wayland
+
+### Vscode
+
+- run `yay -S visual-studio-code-insiders-bin`
