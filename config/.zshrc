@@ -103,10 +103,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
-# 
+#
 # WAYLAND SUPPORT FOR ELECTRON APPS
 export OZONE_PLATFORM=wayland
 export QT_QPA_PLATFORM=wayland
 export GDK_BACKEND=wayland
-
-alias code='code --ozone-platform=wayland'

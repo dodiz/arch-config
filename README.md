@@ -127,3 +127,9 @@ In case you installed another EFI partition to boot arch, windows boot partition
 ### Vscode
 
 - run `yay -S visual-studio-code-insiders-bin`
+- add `vscode/code-flags.conf` to `.config/code-flags.conf` for wayland support
+
+### Hyprpaper (wallpaper)
+
+- run `sudo pacman -S hyprpaper`
+- add wallpapers in `.wallpaper` folder and configure `config/hyprpaper.conf`
