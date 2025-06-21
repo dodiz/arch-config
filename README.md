@@ -10,8 +10,9 @@ Table of contents
   - [DM Ly (login)](#dm-ly-login)
   - [Wofi (program launcher)](#wofi-program-launcher)
   - [Waybar (Status bar)](#waybar-status-bar)
-- [Apps with Wayland](#apps-with-wayland)
   - [Vscode](#vscode)
+  - [Hyprpaper](#hyprland)
+  - [pcmanfm](#pcmanfm-files-manager)
 
 ## Network commands
 
@@ -122,7 +123,9 @@ In case you installed another EFI partition to boot arch, windows boot partition
 - `sudo pacman -S ttf-font-awesome` for icons on waybar
 - Icons: `sudo pacman -S ttf-nerd-fonts-symbols`
 
-## Apps with wayland
+#### Waybar things
+
+- `sudo pacman -S wlogout` for logout button
 
 ### Vscode
 
@@ -133,3 +136,27 @@ In case you installed another EFI partition to boot arch, windows boot partition
 
 - run `sudo pacman -S hyprpaper`
 - add wallpapers in `.wallpaper` folder and configure `config/hyprpaper.conf`
+
+### pcmanfm (Files manager)
+
+- install pcmanfm-gtk3 `sudo pacman -S pcmanfm-gtk3`
+- install lxapperance `sudo pacman -S lxappearance` to change theme
+- install theming `yay -S arc-gtk-theme`
+- copy `hyprland.conf` filer
+
+### Mako (notification daemon)
+
+- `sudo pacman -S mako`
+- `sudo systemctl enable mako.service`
+
+### Screen capture
+
+- `sudo pacman -S grim slurp wl-clipboard swappy jq`
+
+## TODOS
+
+### git auto configure (password storage)
+
+#### Waybar bluetooth manager
+
+#### Waybar network manager
